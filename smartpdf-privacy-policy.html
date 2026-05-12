@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FF6A3D">
+  <title>Privacy Policy — SmartPDF</title>
+  <link rel="canonical" href="https://smartpdf.app/privacy/">
+  <meta name="description" content="How SmartPDF handles your documents, analytics, subscriptions, and personal data. No ads, no IDFA tracking, no data sales.">
+  <style>
+    :root {
+      --brand: #FF6A3D;
+      --brand-tint: rgba(255, 106, 61, 0.08);
+      --ink: #1A1A1A;
+      --ink-secondary: #4A4A4A;
+      --ink-tertiary: #888;
+      --surface: #ffffff;
+      --rule: rgba(0, 0, 0, 0.08);
+      --max-width: 720px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #F5F5F5;
+        --ink-secondary: #C8C8C8;
+        --ink-tertiary: #909090;
+        --surface: #1A1A1A;
+        --rule: rgba(255, 255, 255, 0.1);
+        --brand-tint: rgba(255, 106, 61, 0.16);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+    header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 17px;
+      text-decoration: none;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+    .updated {
+      color: var(--ink-tertiary);
+      font-size: 14px;
+      margin: 0;
+    }
+    .lede {
+      font-size: 17px;
+      color: var(--ink-secondary);
+      margin: 24px 0 0;
+    }
+    nav.toc {
+      background: var(--brand-tint);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 32px 0 48px;
+      font-size: 14px;
+    }
+    nav.toc strong {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+    nav.toc ol {
+      margin: 0;
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 28px;
+    }
+    @media (max-width: 540px) {
+      nav.toc ol { columns: 1; }
+    }
+    nav.toc li {
+      margin-bottom: 4px;
+    }
+    nav.toc a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    nav.toc a:hover { color: var(--brand); }
+    h2 {
+      font-size: 22px;
+      letter-spacing: -0.4px;
+      margin: 48px 0 14px;
+      font-weight: 700;
+      scroll-margin-top: 24px;
+    }
+    h3 {
+      font-size: 16px;
+      letter-spacing: -0.2px;
+      margin: 24px 0 8px;
+      font-weight: 600;
+    }
+    p, ul {
+      color: var(--ink);
+      margin: 0 0 14px;
+    }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    strong { font-weight: 600; }
+    a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { text-decoration: none; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      background: var(--brand-tint);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--ink);
+    }
+    .callout {
+      background: var(--brand-tint);
+      border-left: 3px solid var(--brand);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+      font-size: 15px;
+    }
+    .callout strong { color: var(--brand); }
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--ink-tertiary);
+      font-size: 13px;
+    }
+    footer a { color: var(--ink-tertiary); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="https://apps.apple.com/app/smartpdf">
+        <span class="brand-mark">✦</span>
+        SmartPDF
+      </a>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: May 12, 2026 · Version 1.0</p>
+      <p class="lede">
+        SmartPDF is a PDF editor and translator for iPhone. This page explains
+        exactly what data we touch, where it goes, and what choices you have.
+        We've kept it short on purpose.
+      </p>
+    </header>
+
+    <nav class="toc" aria-label="Table of contents">
+      <strong>On this page</strong>
+      <ol>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#data-you-give">Data you give us</a></li>
+        <li><a href="#data-collected">Data collected automatically</a></li>
+        <li><a href="#subscriptions">Subscriptions &amp; payments</a></li>
+        <li><a href="#third-parties">Third-party services</a></li>
+        <li><a href="#retention">Data retention</a></li>
+        <li><a href="#your-rights">Your rights</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#changes">Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="who-we-are">1. Who we are</h2>
+    <p>
+      <strong>SmartPDF</strong> is an iOS app that lets you read, edit, and
+      translate PDF documents on your iPhone with the help of AI. It's
+      distributed exclusively through the Apple App Store.
+    </p>
+    <p>
+      In this policy, <strong>"we"</strong>, <strong>"our"</strong>, and
+      <strong>"us"</strong> refer to the operator of SmartPDF.
+      <strong>"You"</strong> means anyone who installs or uses the app.
+    </p>
+    <p>
+      We are the data controller for the information described below. To reach
+      us about anything in this policy, write to
+      <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>.
+    </p>
+
+    <h2 id="data-you-give">2. Data you give us</h2>
+
+    <h3>Documents you import</h3>
+    <p>
+      When you import a PDF (via the Files picker, or by sharing one into
+      SmartPDF from Mail / Safari / another app), the file is copied to a
+      private storage area inside the app's sandbox on your device. We
+      <strong>do not upload your documents to our servers</strong> for storage,
+      backup, or any other purpose.
+    </p>
+
+    <h3>Edit and translate inputs</h3>
+    <p>
+      When you tap <strong>Apply</strong> on the AI Edit screen or
+      <strong>Done</strong> on the Translate screen, the following is sent to
+      our AI processing partner (see <a href="#third-parties">Section 5</a>)
+      so the AI model can produce a result:
+    </p>
+    <ul>
+      <li>The text content of the current PDF page (or the portion you selected)</li>
+      <li>The instruction you picked (for example, "Polish", "Make Formal", or "Translate to Spanish")</li>
+      <li>Any free-form prompt you typed into the input field</li>
+    </ul>
+    <p>
+      The result is returned to your device. <strong>We do not retain a copy on
+      our own servers.</strong> Our AI partner's retention is described under
+      <a href="#third-parties">Third-party services</a>.
+    </p>
+
+    <h3>What we never collect</h3>
+    <div class="callout">
+      SmartPDF has <strong>no login system</strong>. We do not ask for or
+      collect your name, email, phone number, contacts, photos, or location.
+      You don't have an account with us.
+    </div>
+
+    <h2 id="data-collected">3. Data collected automatically</h2>
+
+    <p>
+      We use <strong>Firebase Analytics</strong> and <strong>Firebase
+      Crashlytics</strong> (both operated by Google LLC) to understand how the
+      app is used and to fix crashes.
+    </p>
+
+    <h3>Usage events</h3>
+    <p>
+      When you tap a button, change a setting, or trigger a feature, the app
+      sends an anonymous event to Firebase. Example event names include
+      <code>paywall_view</code>, <code>library_doc_open</code>,
+      <code>purchase_started</code>, <code>pdf_import_succeeded</code>. We use
+      this to learn which features people use and where they get stuck.
+    </p>
+    <p>
+      We <strong>never</strong> attach the contents of your documents, your
+      Edit prompts, or the AI-generated text to these events.
+    </p>
+
+    <h3>Crash diagnostics</h3>
+    <p>
+      If SmartPDF crashes, Crashlytics collects: the call stack, your iOS
+      version, your device model, available disk space at the time of the
+      crash, and the last screen the app was on. This goes to Google so we can
+      diagnose the bug.
+    </p>
+
+    <h3>Device identifier</h3>
+    <p>
+      Firebase generates an anonymous <strong>installation ID</strong> the
+      first time you launch the app. It is <em>not</em> your Apple ID, IDFA,
+      phone number, or any other identifier that follows you across other
+      apps. Reinstalling SmartPDF generates a new ID.
+    </p>
+
+    <h3>Subscription state attached to events</h3>
+    <p>
+      For aggregate analytics, the app attaches your current subscription
+      state to events as <em>user properties</em>: whether you're on the free
+      or paid plan, which tier (Basic / Plus / Pro), billing cycle, and how
+      many free AI uses you have left. This lets us answer questions like
+      "what share of Pro users use Translate vs Edit" without identifying
+      individuals.
+    </p>
+
+    <div class="callout">
+      <strong>What we don't do:</strong> we don't use IDFA / App Tracking
+      Transparency, we don't build advertising profiles, we don't share data
+      with data brokers, and we don't track you across other apps or websites.
+    </div>
+
+    <h2 id="subscriptions">4. Subscriptions and payments</h2>
+    <p>
+      All paid plans are sold and processed by <strong>Apple</strong> through
+      the App Store using StoreKit. We <strong>never see your credit card
+      number, billing address, or full name.</strong> Apple shares back with
+      us only:
+    </p>
+    <ul>
+      <li>Whether you currently have an active subscription</li>
+      <li>Which tier and billing cycle (for example, Plus Monthly)</li>
+      <li>An anonymous transaction identifier</li>
+    </ul>
+    <p>
+      Apple's handling of your payment data is governed by Apple's own
+      privacy policy:
+      <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.
+    </p>
+
+    <h2 id="third-parties">5. Third-party services</h2>
+
+    <h3>Firebase Analytics &amp; Crashlytics (Google LLC)</h3>
+    <p>
+      Anonymous usage events and crash reports, as described in
+      <a href="#data-collected">Section 3</a>. Data is stored on Google
+      infrastructure in the United States and other Google regions. Privacy
+      policy:
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+    </p>
+
+    <h3>Replicate (Replicate, Inc.)</h3>
+    <p>
+      Replicate hosts the AI models that power SmartPDF's Edit and Translate
+      features. Only when you explicitly tap Apply or Done is the relevant
+      page text plus your instruction transmitted to Replicate over HTTPS.
+      The model returns a response; nothing is stored on our servers. We
+      configure Replicate so that your inputs are not used to train new models
+      where that option is available. Privacy policy:
+      <a href="https://replicate.com/privacy" target="_blank" rel="noopener">replicate.com/privacy</a>.
+    </p>
+
+    <h3>Apple StoreKit</h3>
+    <p>
+      Subscriptions and in-app purchases. See
+      <a href="#subscriptions">Section 4</a>.
+    </p>
+
+    <h3>Umeng (友盟统计) — China region only</h3>
+    <p>
+      If you download SmartPDF from the mainland China App Store, the app
+      additionally reports anonymous usage events to <strong>Umeng (Beijing)
+      Information Technology Co., Ltd.</strong>, which is the analytics
+      service most widely used in China. The events sent to Umeng mirror what
+      we send to Firebase. Privacy policy:
+      <a href="https://www.umeng.com/page/policy" target="_blank" rel="noopener">umeng.com/page/policy</a>.
+    </p>
+    <p>
+      Outside of mainland China, Umeng is not enabled and no data is sent to
+      it.
+    </p>
+
+    <h2 id="retention">6. How long we keep data</h2>
+    <ul>
+      <li>
+        <strong>On your device.</strong> Imported PDFs and local app data
+        remain until you delete the app from your iPhone, or until you remove
+        them manually from inside SmartPDF.
+      </li>
+      <li>
+        <strong>Analytics events.</strong> Firebase retains events for up to
+        14 months by default before they are aggregated and further
+        anonymized.
+      </li>
+      <li>
+        <strong>Crash reports.</strong> Crashlytics retains crash data for up
+        to 90 days.
+      </li>
+      <li>
+        <strong>AI inputs.</strong> Not retained by us. Replicate's retention
+        is governed by their privacy policy.
+      </li>
+    </ul>
+
+    <h2 id="your-rights">7. Your rights</h2>
+    <p>
+      Depending on where you live, you may have the right to:
+    </p>
+    <ul>
+      <li>Access the data we hold associated with your installation</li>
+      <li>Request that we delete it</li>
+      <li>Object to certain processing or restrict it</li>
+      <li>Lodge a complaint with your local data protection authority</li>
+    </ul>
+    <p>
+      To exercise any of these rights, write to
+      <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>. Because we do not
+      collect names or emails, we may ask you for additional information to
+      help locate your records — typically your Firebase installation ID,
+      which you can retrieve by emailing us with your approximate install
+      date and device model.
+    </p>
+    <p>
+      <strong>California residents (CCPA / CPRA).</strong> SmartPDF does not
+      "sell" or "share" personal information as those terms are defined under
+      California law. You may still request access or deletion using the
+      contact above.
+    </p>
+    <p>
+      <strong>EU / EEA / UK residents (GDPR / UK GDPR).</strong> The legal
+      bases for our processing are: (a) performance of the contract under
+      which we provide you the app and any subscription, and (b) our
+      legitimate interest in understanding how the app is used and fixing
+      bugs. You have the rights described above plus the right to data
+      portability where applicable.
+    </p>
+    <p>
+      <strong>Brazil residents (LGPD).</strong> The data we collect, why we
+      collect it, and your rights are as described in this policy.
+    </p>
+
+    <h2 id="children">8. Children's privacy</h2>
+    <p>
+      SmartPDF is intended for users aged 13 and older (16 in some EU
+      jurisdictions). We do not knowingly collect data from children under
+      this age. If you believe a child has used SmartPDF and that data has
+      been collected, write to us and we'll delete the relevant records.
+    </p>
+
+    <h2 id="transfers">9. International data transfers</h2>
+    <p>
+      Firebase and Replicate process data on servers in the United States and
+      other countries. By using SmartPDF, you understand that data may be
+      transferred there. For users in the EU and the UK, these transfers are
+      covered by Standard Contractual Clauses approved by the European
+      Commission and the UK Information Commissioner's Office, executed
+      between us and the relevant providers.
+    </p>
+
+    <h2 id="security">10. Security</h2>
+    <p>
+      All network communication between SmartPDF and our processing partners
+      uses HTTPS with TLS 1.2 or higher. PDFs remain on your device unless
+      you explicitly invoke the Edit or Translate features. iOS's app sandbox
+      keeps SmartPDF's local files isolated from other apps on your phone.
+    </p>
+    <p>
+      No system is perfectly secure. If we ever discover a breach affecting
+      your data, we will notify you and the relevant authorities as required
+      by law.
+    </p>
+
+    <h2 id="changes">11. Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The "Last updated"
+      date at the top reflects the most recent revision. Material changes
+      (such as adding a new third-party service or starting to collect a new
+      category of data) will be highlighted inside the app or in the App
+      Store release notes.
+    </p>
+
+    <h2 id="contact">12. Contact us</h2>
+    <p>
+      Email: <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>
+    </p>
+    <p>
+      We try to reply within five business days.
+    </p>
+
+    <footer>
+      <p>
+        © 2026 SmartPDF · <a href="smartpdf-terms.html">Terms of Service</a> ·
+        <a href="smartpdf-privacy-policy.html">Privacy Policy</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
