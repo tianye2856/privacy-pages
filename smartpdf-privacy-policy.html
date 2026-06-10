@@ -182,7 +182,7 @@
         SmartPDF
       </a>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: June 9, 2026 · Version 1.0</p>
+      <p class="updated">Last updated: June 10, 2026 · Version 1.1</p>
       <p class="lede">
         SmartPDF is a PDF editor and translator for iPhone. This page explains
         exactly what data we touch, where it goes, and what choices you have.
@@ -237,11 +237,13 @@
       for storage, backup, advertising, or resale.
     </p>
     <p>
-      If you explicitly use an AI feature, SmartPDF may send only the relevant
-      selected text or page text to an AI provider. If a PDF has no selectable
-      text or a parsing/OCR workflow is enabled, SmartPDF may send the PDF file
-      or page image to an AI processing provider solely to extract document text
-      and return the parsed result to your device.
+      If you explicitly run an AI feature, SmartPDF sends only what that
+      feature needs (see <a href="#third-parties">Section 5</a>): AI Edit
+      uploads the PDF document you are editing so the model can modify it
+      directly and return the edited file; Translate sends a rendered image
+      of the current page, or just the text you selected. Because a page
+      image is sent rather than extracted text, this also works for scanned
+      PDFs. Your documents are never sent anywhere in the background.
     </p>
 
     <h3>Edit and translate inputs</h3>
@@ -252,7 +254,10 @@
       so the AI model can produce a result:
     </p>
     <ul>
-      <li>The text content of the current PDF page (or the portion you selected)</li>
+      <li><strong>AI Edit:</strong> the PDF document you are editing, uploaded
+        so the AI can apply your change and return the edited PDF</li>
+      <li><strong>Translate:</strong> a rendered image of the current page
+        (or just the portion of text you selected)</li>
       <li>The instruction you picked (for example, "Polish", "Make Formal", or "Translate to Spanish")</li>
       <li>Any free-form prompt you typed into the input field</li>
     </ul>
@@ -354,10 +359,15 @@
     <h3>OpenAI (OpenAI, L.L.C.)</h3>
     <p>
       OpenAI provides the AI models that power SmartPDF's Edit and Translate
-      features. Only when you explicitly tap Apply or Done is the relevant
-      page text (or the portion you selected) plus your instruction sent to
-      the OpenAI API over HTTPS. The model's response is returned to your
-      device; <strong>nothing is stored on our servers.</strong>
+      features. Only when you explicitly tap Apply or Done is anything sent
+      to the OpenAI API over HTTPS. For <strong>AI Edit</strong>, the PDF
+      document you are editing plus your instruction are uploaded; the model
+      edits the file in a temporary, isolated sandbox and returns the edited
+      PDF, after which SmartPDF deletes the uploaded file from OpenAI. For
+      <strong>Translate</strong>, a rendered image of the current page (or
+      the text you selected) plus your instruction are sent. The result is
+      returned to your device; <strong>nothing is stored on our
+      servers.</strong>
     </p>
     <p>
       Under OpenAI's API data usage policies, content you send through the API
@@ -365,21 +375,6 @@
       up to 30 days for abuse and misuse monitoring before deletion. Privacy
       policy:
       <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a>.
-    </p>
-
-    <h3>Replicate (Replicate, Inc.)</h3>
-    <p>
-      Replicate may be used for PDF parsing/OCR or AI model routing when a
-      document requires server-side extraction, layout parsing, or model
-      processing. In that case, the relevant PDF file, page image, extracted
-      text, and your instruction are transmitted to Replicate over HTTPS only
-      to complete the action you requested. The parsed result or model output
-      is returned to your device; <strong>nothing is stored on our servers.</strong>
-    </p>
-    <p>
-      We configure provider settings to avoid using your inputs to train models
-      where that option is available. Replicate's privacy policy is available
-      at <a href="https://replicate.com/privacy" target="_blank" rel="noopener">replicate.com/privacy</a>.
     </p>
 
     <h3>Apple StoreKit</h3>
@@ -419,11 +414,11 @@
         to 90 days.
       </li>
       <li>
-        <strong>AI inputs.</strong> Not retained by us. OpenAI retains API
-        inputs and outputs for up to 30 days for abuse monitoring and then
-        deletes them, and does not use API data to train its models. Replicate
-        retention is governed by Replicate's privacy policy and provider
-        settings for the model used.
+        <strong>AI inputs.</strong> Not retained by us. PDFs uploaded for AI
+        Edit are deleted from OpenAI by the app as soon as the edit
+        completes. Beyond that, OpenAI retains API inputs and outputs for up
+        to 30 days for abuse monitoring and then deletes them, and does not
+        use API data to train its models.
       </li>
     </ul>
 
@@ -474,7 +469,7 @@
 
     <h2 id="transfers">9. International data transfers</h2>
     <p>
-      Firebase, OpenAI, and Replicate process data on servers in the United States and
+      Firebase and OpenAI process data on servers in the United States and
       other countries. By using SmartPDF, you understand that data may be
       transferred there. For users in the EU and the UK, these transfers are
       covered by Standard Contractual Clauses approved by the European
