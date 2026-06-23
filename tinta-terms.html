@@ -6,6 +6,10 @@
   <meta name="theme-color" content="#F36D5D">
   <title>Terms of Use | Tinta</title>
   <link rel="canonical" href="https://tianye2856.github.io/privacy-pages/tinta-terms.html">
+  <link rel="alternate" hreflang="en" href="https://tianye2856.github.io/privacy-pages/tinta-terms.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tianye2856.github.io/privacy-pages/tinta-terms-zh-Hans.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://tianye2856.github.io/privacy-pages/tinta-terms-pt-BR.html">
+  <link rel="alternate" hreflang="x-default" href="https://tianye2856.github.io/privacy-pages/tinta-terms.html">
   <meta name="description" content="Terms of Use for Tinta, an iOS coloring book app with color-by-number pages, photo-to-coloring-page tools, subscriptions, and rewarded ads.">
   <style>
     :root {
@@ -51,6 +55,20 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .meta { color: var(--muted); margin: 0; }
+    .language-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+    .language-switch a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 11px;
+      color: var(--muted);
+      background: var(--paper);
+      font-size: 14px;
+    }
+    .language-switch a[aria-current="true"] {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-color: transparent;
+    }
     .notice {
       margin-top: 18px;
       padding: 14px 16px;
@@ -72,6 +90,11 @@
         Please read these Terms carefully before using Tinta. By downloading,
         accessing, or using the app, you agree to these Terms.
       </div>
+      <nav class="language-switch" aria-label="Language versions">
+        <a href="tinta-terms.html" aria-current="true">English</a>
+        <a href="tinta-terms-zh-Hans.html">简体中文</a>
+        <a href="tinta-terms-pt-BR.html">Português (BR)</a>
+      </nav>
     </header>
 
     <section class="section">

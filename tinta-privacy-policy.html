@@ -7,6 +7,10 @@
   <meta name="theme-color" content="#F36D5D">
   <title>Privacy Policy | Tinta</title>
   <link rel="canonical" href="https://tianye2856.github.io/privacy-pages/tinta-privacy-policy.html">
+  <link rel="alternate" hreflang="en" href="https://tianye2856.github.io/privacy-pages/tinta-privacy-policy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tianye2856.github.io/privacy-pages/tinta-privacy-policy-zh-Hans.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://tianye2856.github.io/privacy-pages/tinta-privacy-policy-pt-BR.html">
+  <link rel="alternate" hreflang="x-default" href="https://tianye2856.github.io/privacy-pages/tinta-privacy-policy.html">
   <meta name="description" content="Privacy Policy for Tinta, an iOS coloring book app with color-by-number pages, photo-to-coloring-page tools, optional AI creation, subscriptions, and rewarded ads.">
   <style>
     :root {
@@ -69,6 +73,26 @@
       justify-content: center;
       color: #fff;
       font-weight: 900;
+    }
+    .language-switch {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+    }
+    .language-switch a {
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 6px 11px;
+      color: var(--ink-secondary);
+      background: var(--surface);
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .language-switch a[aria-current="true"] {
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+      border-color: transparent;
     }
     h1 {
       margin: 0 0 10px;
@@ -153,6 +177,11 @@
         Photos are used only to make the coloring page you ask for. We do not sell your
         personal data or your photos.
       </p>
+      <nav class="language-switch" aria-label="Language versions">
+        <a href="tinta-privacy-policy.html" aria-current="true">English</a>
+        <a href="tinta-privacy-policy-zh-Hans.html">简体中文</a>
+        <a href="tinta-privacy-policy-pt-BR.html">Português (BR)</a>
+      </nav>
     </header>
 
     <nav class="toc" aria-label="Table of contents">

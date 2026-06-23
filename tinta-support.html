@@ -7,6 +7,10 @@
   <meta name="theme-color" content="#F36D5D">
   <title>Support | Tinta</title>
   <link rel="canonical" href="https://tianye2856.github.io/privacy-pages/tinta-support.html">
+  <link rel="alternate" hreflang="en" href="https://tianye2856.github.io/privacy-pages/tinta-support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://tianye2856.github.io/privacy-pages/tinta-support-zh-Hans.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://tianye2856.github.io/privacy-pages/tinta-support-pt-BR.html">
+  <link rel="alternate" hreflang="x-default" href="https://tianye2856.github.io/privacy-pages/tinta-support.html">
   <meta name="description" content="Help and support for Tinta: coloring pages, photo-to-coloring-page, daily unlocks, rewarded ads, Tinta Pro subscriptions, and contact.">
   <style>
     :root {
@@ -44,6 +48,21 @@
     header { margin-bottom: 30px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
     .brand { font-weight: 800; font-size: 18px; color: var(--ink); margin-bottom: 28px; }
     .brand span { color: var(--brand); }
+    .language-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+    .language-switch a {
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 6px 11px;
+      color: var(--ink-secondary);
+      background: rgba(255, 255, 255, 0.45);
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .language-switch a[aria-current="true"] {
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      border-color: transparent;
+    }
     h1 { font-size: clamp(32px, 7vw, 46px); line-height: 1.08; margin: 0 0 8px; letter-spacing: 0; }
     h2 { font-size: 22px; line-height: 1.25; margin: 42px 0 12px; letter-spacing: 0; }
     h3 { font-size: 17px; line-height: 1.3; margin: 24px 0 8px; }
@@ -90,6 +109,11 @@
       <div class="brand">Tinta<span>.</span></div>
       <h1>Support</h1>
       <p class="meta">Help for Tinta - Coloring Book and Paint</p>
+      <nav class="language-switch" aria-label="Language versions">
+        <a href="tinta-support.html" aria-current="true">English</a>
+        <a href="tinta-support-zh-Hans.html">简体中文</a>
+        <a href="tinta-support-pt-BR.html">Português (BR)</a>
+      </nav>
     </header>
 
     <div class="card">
