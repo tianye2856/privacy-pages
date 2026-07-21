@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support | PicKeeper</title>
+  <meta name="description" content="Help center for PicKeeper: Photo Cleaner.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b2727;
+      --muted: #6f7a80;
+      --line: #dfe7ee;
+      --paper: #f4f8fc;
+      --accent: #4da8f8;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.62;
+    }
+    main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 72px; }
+    header { padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+    .brand { font-weight: 700; color: var(--accent); letter-spacing: .01em; }
+    h1 { margin: 6px 0 8px; font-size: clamp(32px, 6vw, 54px); line-height: 1.05; }
+    h2 { margin: 40px 0 10px; font-size: 22px; line-height: 1.25; }
+    h3 { margin: 22px 0 4px; font-size: 17px; }
+    p, li { font-size: 16px; }
+    p { margin: 10px 0; }
+    ul { padding-left: 24px; margin: 10px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); margin: 0; }
+    .notice {
+      margin-top: 18px; padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: #eaf4fe; border-radius: 8px;
+    }
+    .section { padding-bottom: 2px; border-bottom: 1px solid var(--line); }
+    footer { margin-top: 44px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="brand">PicKeeper.</p>
+      <h1>Support</h1>
+      <p class="meta">PicKeeper: Photo Cleaner — Help Center</p>
+      <div class="notice">
+        Fastest way to reach us: <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>.
+        We reply to every message, usually within 1–2 business days.
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Frequently asked questions</h2>
+
+      <h3>How does PicKeeper decide which photo is the "best" one?</h3>
+      <p>
+        For each burst or group of near-identical shots, PicKeeper scores every photo on your device using image aesthetics, sharpness, and — when people are in frame — face capture quality. The highest-scoring photo is marked as the keeper and the rest are pre-selected for cleanup. You can always override the choice by tapping a different photo.
+      </p>
+
+      <h3>Does PicKeeper delete my photos automatically?</h3>
+      <p>
+        No. Nothing is ever deleted without you tapping through. Items you clean up go to PicKeeper's <strong>Recycle Bin</strong> first, where they stay restorable for 30 days. Permanent deletion happens only when you empty the Recycle Bin, and iOS shows its own confirmation dialog before removing anything. Deleted photos then also sit in the iOS "Recently Deleted" album for a further period.
+      </p>
+
+      <h3>I deleted something by mistake. Can I get it back?</h3>
+      <p>
+        Yes, in most cases. Open <strong>Me → Recycle Bin</strong> and tap Restore. If you already emptied the Recycle Bin, check the Photos app → Albums → Recently Deleted.
+      </p>
+
+      <h3>How does searching by description work?</h3>
+      <p>
+        PicKeeper builds an on-device index of what your photos look like, so you can type things like "snow last winter", "dog on the beach", or "receipt" and get matching photos back. The matching model runs on your iPhone — nothing is uploaded and it works with the network off.
+      </p>
+
+      <h3>Why does the first scan take a while?</h3>
+      <p>
+        The first run analyzes every photo in your library once. Larger libraries take longer, and it is faster while the device is charging and on screen. After that, only new photos are analyzed, so later launches are quick.
+      </p>
+
+      <h3>Are my photos private?</h3>
+      <p>
+        Yes. Photos are analyzed entirely on your device and are never uploaded to us or anyone else. We have no photo servers and no accounts. The only things that leave your device are anonymous usage statistics and — if an event needs a place name — approximate coordinates sent to Apple, never an image. Details in our <a href="https://tianye2856.github.io/privacy-pages/pickeeper-privacy-policy.html">Privacy Policy</a>.
+      </p>
+
+      <h3>What is free and what needs Pro?</h3>
+      <p>
+        Scanning, browsing every result, and search are free. Pro unlocks batch cleanup (moving groups to the Recycle Bin in one tap), Accept All for similar-photo groups, and memory video export.
+      </p>
+
+      <h3>How do I manage or cancel my subscription?</h3>
+      <p>
+        Subscriptions are billed by Apple. Open the <strong>Settings app → [your name] → Subscriptions → PicKeeper</strong> to change plans or cancel. Deleting the app does not cancel a subscription. If you started a free trial, cancel at least 24 hours before it ends to avoid being charged.
+      </p>
+
+      <h3>How do I restore a purchase?</h3>
+      <p>
+        In PicKeeper go to <strong>Me → Restore Purchases</strong> while signed in with the Apple Account that made the original purchase.
+      </p>
+
+      <h3>Memory video export failed or looks wrong</h3>
+      <p>
+        Memory videos are rendered on your device, so they need a little free storage and a few seconds of foreground time. Make sure the event has at least two photos, keep PicKeeper open while it renders, and free up space if your device is nearly full.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        Email <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>
+        with your iOS version, your iPhone model, and a short description of the issue. Screenshots help.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        PicKeeper ·
+        <a href="https://tianye2856.github.io/privacy-pages/pickeeper-privacy-policy.html">Privacy Policy</a> ·
+        <a href="https://tianye2856.github.io/privacy-pages/pickeeper-terms.html">Terms of Use</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
