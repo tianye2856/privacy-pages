@@ -187,9 +187,9 @@
         Mushroom ID
       </span>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: June 8, 2026 · Version 1.0</p>
+      <p class="updated">Last updated: September 14, 2026 · Version 1.1</p>
       <p class="lede">
-        Mushroom ID identifies mushrooms from a photo on your iPhone. This page
+        Mushroom ID suggests mushroom identities from one to three photos on your iPhone. This page
         explains exactly what data we touch, where it goes, and what choices you
         have. We've kept it short on purpose.
       </p>
@@ -222,7 +222,7 @@
     <h2 id="who-we-are">1. Who we are</h2>
     <p>
       <strong>Mushroom ID</strong> is an iOS app that identifies mushrooms from
-      a photo using AI, and provides a library of educational articles about
+      one to three photos of the same specimen using AI, and provides a library of educational articles about
       wild mushrooms. It's distributed exclusively through the Apple App Store.
     </p>
     <p>
@@ -241,17 +241,28 @@
     <h3>Photos you take or choose</h3>
     <p>
       To identify a mushroom, you either take a photo with the camera or pick an
-      existing photo from your library. With your permission, the app accesses
-      only the single image you capture or select &mdash; it does not scan,
+      existing photo from your library. You can provide up to three photos of
+      the same specimen from different angles. The app accesses the images you
+      capture or select &mdash; it does not scan,
       index, or upload the rest of your photo library.
     </p>
     <p>
-      When you start an identification, that one image is sent over an encrypted
+      When you start an identification, the selected images are sent over an encrypted
       connection to our AI processing partner (see
       <a href="#third-parties">Section 5</a>) so the model can recognize the
       mushroom and return a result. The result is shown on your device.
       <strong>We do not keep a copy of your photo on our own servers</strong>,
       and we do not use your photos to build a profile of you.
+    </p>
+
+    <h3>Optional photo capture area</h3>
+    <p>
+      A selected photo may contain capture coordinates. The app reads these on
+      your device and offers a separate choice about using the capture area.
+      Only if you agree, coordinates rounded to the nearest 0.5 degrees are
+      included with the identification request. The app does not request your
+      current GPS location. Images are re-encoded for upload without their
+      original location metadata. You can identify without sharing a capture area.
     </p>
 
     <h3>Saving results</h3>
@@ -263,16 +274,28 @@
 
     <h3>Referral code</h3>
     <p>
-      If you enter a referral or invite code during onboarding, it is stored
-      locally on your device and may be sent with a request to validate it. A
-      referral code is not personal information and is not tied to your identity.
+      Previously redeemed promotional access is stored locally on your device.
+      Promotional codes are validated by the app. A successful redemption or
+      failed attempt can generate an analytics event; this does not send your
+      photos or location to analytics.
     </p>
 
-    <h3>What we never collect</h3>
+    <h3>Feedback you choose to submit</h3>
+    <p>
+      The optional feedback board uses WishKit. If you submit feedback or vote,
+      WishKit processes the content and interaction together with a pseudonymous
+      user identifier. Feedback posted to the board may be visible to other users.
+      Avoid including private information. If you email support, we receive the
+      email address and content you send.
+    </p>
+
+    <h3>No account required</h3>
     <div class="callout">
       Mushroom ID has <strong>no login system</strong>. We do not ask for or
-      collect your name, email, phone number, contacts, calendar, health data,
-      or precise location. You don't have an account with us.
+      require your name, email, phone number, contacts, calendar, or health data
+      to identify a mushroom. Optional feedback and support communications are
+      described above. Any photo coordinates are handled as described under
+      Optional photo capture area.
     </div>
 
     <h2 id="data-collected">3. Data collected automatically</h2>
@@ -286,14 +309,16 @@
     <h3>Usage events</h3>
     <p>
       When you open a screen, tap a button, or trigger a feature, the app sends
-      an anonymous event. Example event names include
-      <code>identify_started</code>, <code>identify_succeeded</code>,
-      <code>paywall_view</code>, and <code>purchase_started</code>. We use this
+      a usage event associated with SDK identifiers. Example event names include
+      <code>identify_start</code>, <code>identify_success</code>,
+      <code>paywall_view</code>, and <code>paywall_subscribe_tap</code>. We use this
       to learn which features people use and where they get stuck.
     </p>
     <p>
-      We <strong>never</strong> attach your photos or identification images to
-      these analytics events.
+      We do not attach your photos, photo capture coordinates, or full identification
+      reports to these analytics events. Events can include a candidate common
+      name and visual resemblance estimate, photo count, selected plan, success
+      or error category, and processing duration.
     </p>
 
     <h3>Diagnostics</h3>
@@ -305,10 +330,11 @@
 
     <h3>Device identifier</h3>
     <p>
-      Analytics SDKs generate an anonymous <strong>installation / instance
-      ID</strong> the first time you launch the app. It is <em>not</em> your
-      Apple ID, IDFA, phone number, or any identifier that follows you across
-      other apps. Reinstalling the app generates a new ID.
+      Analytics SDKs process pseudonymous installation or device identifiers,
+      app and device information, and network information such as an IP address.
+      Firebase may derive an approximate location from the IP address. These
+      identifiers are not your name or Apple ID. We do not request IDFA access
+      or use these events for advertising profiles.
     </p>
 
     <h3>Subscription state attached to events</h3>
@@ -316,7 +342,7 @@
       For aggregate analytics, the app attaches your current subscription state
       to events as <em>user properties</em> &mdash; for example, whether you're
       on the free or paid plan. This lets us answer questions like "what share
-      of subscribers use identification most" without identifying individuals.
+      of subscribers use identification most" in aggregate reports.
     </p>
 
     <div class="callout">
@@ -333,11 +359,14 @@
     </p>
     <ul>
       <li>Whether you currently have an active subscription</li>
-      <li>Which plan and billing cycle (for example, Monthly or Yearly)</li>
-      <li>An anonymous transaction identifier</li>
+      <li>Which subscription product and billing period you purchased</li>
+      <li>Transaction identifiers and dates, expiration and revocation information</li>
+      <li>Renewal and introductory-offer information used to verify access</li>
     </ul>
     <p>
-      Apple's handling of your payment data is governed by Apple's own privacy
+      Firebase Analytics can also record purchase and subscription events,
+      including product and purchase value information. Apple's handling of
+      your payment data is governed by Apple's own privacy
       policy:
       <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.
     </p>
@@ -346,17 +375,17 @@
 
     <h3>Replicate (Replicate, Inc.)</h3>
     <p>
-      Replicate hosts the AI model that identifies your mushroom photo. Only
-      when you start an identification is the selected image transmitted to
-      Replicate over HTTPS. The model returns a result; nothing is stored on our
-      own servers. Where the option is available, we configure Replicate so that
-      your inputs are not used to train new models. Privacy policy:
+      The app calls Google's Gemini 3 Flash through Replicate. When you start
+      identification, selected images and any confirmed coarse photo capture
+      area are transmitted over HTTPS for model processing. Our app does not
+      maintain a separate server copy. Processing by Replicate and its model
+      providers is governed by the applicable provider policies. Privacy policy:
       <a href="https://replicate.com/privacy" target="_blank" rel="noopener">replicate.com/privacy</a>.
     </p>
 
     <h3>Firebase Analytics (Google LLC)</h3>
     <p>
-      Anonymous usage events and diagnostics, as described in
+      Usage events, SDK identifiers, and diagnostics, as described in
       <a href="#data-collected">Section 3</a>. Data is stored on Google
       infrastructure in the United States and other Google regions. Privacy
       policy:
@@ -372,26 +401,46 @@
     <h3>Umeng (友盟统计)</h3>
     <p>
       The app uses the Umeng analytics SDK, operated by <strong>Umeng (Beijing)
-      Information Technology Co., Ltd.</strong>, to report anonymous usage and
+      Information Technology Co., Ltd.</strong>, to report usage events and
       basic device information. The events sent to Umeng mirror what we send to
       Firebase and contain no photos. Privacy policy:
       <a href="https://www.umeng.com/page/policy" target="_blank" rel="noopener">umeng.com/page/policy</a>.
     </p>
 
+    <h3>WishKit</h3>
+    <p>
+      Provides the optional feedback board, processing submitted content,
+      pseudonymous user identifiers, and interactions such as votes.
+      Service information: <a href="https://www.wishkit.io" target="_blank" rel="noopener">wishkit.io</a>.
+    </p>
+
+    <h3>iNaturalist reference images</h3>
+    <p>
+      Result screens can request reference photos from iNaturalist and its image
+      hosts using a candidate's scientific name. These requests include normal
+      network information, such as an IP address; they do not upload your specimen
+      photos or confirmed capture area to iNaturalist. Privacy policy:
+      <a href="https://www.inaturalist.org/pages/privacy" target="_blank" rel="noopener">inaturalist.org/pages/privacy</a>.
+    </p>
+
     <h2 id="retention">6. How long we keep data</h2>
     <ul>
       <li>
-        <strong>On your device.</strong> Your photos, saved results, and local
-        app data stay on your iPhone until you delete them or remove the app.
+        <strong>On your device.</strong> Preferences, free identification count,
+        and promotional access are stored locally. Saved images remain in your
+        Photos library until you delete them there; removing the app does not
+        delete images already saved to Photos.
       </li>
       <li>
         <strong>Identification images.</strong> Not retained by us. Replicate's
         retention is governed by their privacy policy.
       </li>
       <li>
-        <strong>Analytics events.</strong> Firebase retains events for up to 14
-        months by default before they are aggregated and further anonymized.
-        Umeng retains data according to its own policy.
+        <strong>Analytics and feedback.</strong> Retention depends on the
+        relevant provider policies and the service configuration. Contact us
+        for information about records associated with your installation or
+        feedback, or to request deletion. We do not describe these SDK records
+        as immediately anonymous or promise deletion merely upon uninstalling.
       </li>
     </ul>
 
@@ -406,8 +455,8 @@
     <p>
       To exercise any of these rights, write to
       <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>.
-      Because we do not collect names or emails, we may ask you for additional
-      information to help locate your records.
+      Because use of the app does not require an account, we may ask you for
+      additional information to help locate your records.
     </p>
     <p>
       <strong>California residents (CCPA / CPRA).</strong> Mushroom ID does not
