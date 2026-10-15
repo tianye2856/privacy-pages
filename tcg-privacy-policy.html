@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Rip &amp; Track</title>
+  <meta name="description" content="Privacy Policy for Rip &amp; Track, the trading card scanner and collection tracker. Card photos are read on your device and never uploaded; your collection stays on your device.">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1b2430;
+      --muted: #66717f;
+      --line: #dde3ea;
+      --paper: #f5f7fa;
+      --accent: #1f6fb8;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.62;
+    }
+    main { width: min(920px, calc(100% - 32px)); margin: 0 auto; padding: 48px 0 72px; }
+    header { padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+    h1 { margin: 0 0 8px; font-size: clamp(32px, 6vw, 54px); line-height: 1.05; }
+    h2 { margin: 40px 0 10px; font-size: 22px; line-height: 1.25; }
+    p, li { font-size: 16px; }
+    p { margin: 10px 0; }
+    ul { padding-left: 24px; margin: 10px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: var(--muted); margin: 0; }
+    .notice {
+      margin-top: 18px; padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: #e9f1fa; border-radius: 8px;
+    }
+    .section { padding-bottom: 2px; border-bottom: 1px solid var(--line); }
+    footer { margin-top: 44px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Rip &amp; Track &mdash; TCG Card Scanner &amp; Collection Tracker</p>
+      <p class="meta">Effective date: October 15, 2026</p>
+      <div class="notice">
+        <strong>Short version:</strong> Rip &amp; Track reads your card photos on your device with Apple&rsquo;s Vision framework and never uploads them. To look up a price, only the recognised card text (such as the card name, set and number) is sent to public card databases. Your collection is stored on your device. There are no accounts, no ads and no cross-app tracking; anonymous usage statistics are collected with Firebase Analytics and Umeng, and we never sell your data.
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>1. Who We Are</h2>
+      <p>This policy explains how Rip &amp; Track (&ldquo;the App&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) handles information. It applies to the Rip &amp; Track iOS app distributed on the Apple App Store, published by LIE KUN JI.</p>
+      <p>Contact: <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a></p>
+    </section>
+
+    <section class="section">
+      <h2>2. What the App Does</h2>
+      <p>Rip &amp; Track identifies trading cards (Pok&eacute;mon, One Piece Card Game and Magic: The Gathering) from a photo, shows estimated market prices, lets you keep a collection and follow its value over time, and can alert you when a card&rsquo;s price reaches a level you choose.</p>
+    </section>
+
+    <section class="section">
+      <h2>3. Data We Do Not Collect</h2>
+      <ul>
+        <li>No user accounts. The App works without registration of any kind.</li>
+        <li>No names, email addresses, contacts, precise or approximate location, health data, messages or browsing history.</li>
+        <li>No advertising, no third-party advertising SDKs, no advertising identifier (IDFA) and no tracking across other companies&rsquo; apps or websites. For this reason the App does not show the App Tracking Transparency prompt.</li>
+        <li>We do not sell, rent or share personal data with data brokers.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>4. Camera and Photos</h2>
+      <p>When you scan a card, the camera image (or the photo you pick from your library) is analysed <strong>on your device</strong> using Apple&rsquo;s Vision text-recognition framework to read the printed card name, set code and collector number. The image itself is never uploaded &mdash; not to us and not to any third party.</p>
+      <p>If you choose a photo from your library, the App reads only the photo you select. Any scan image or thumbnail the App keeps for your scan history stays on your device. Camera and photo access can be changed at any time in iOS Settings.</p>
+    </section>
+
+    <section class="section">
+      <h2>5. Price Lookups</h2>
+      <p>To find a card and its price, the App sends the recognised card text &mdash; the card name, set or set code, collector number and game &mdash; over an encrypted connection to the public card database for that game:</p>
+      <ul>
+        <li>Pok&eacute;mon: TCGdex (<a href="https://api.tcgdex.net">api.tcgdex.net</a>, see <a href="https://tcgdex.dev">tcgdex.dev</a>)</li>
+        <li>Magic: The Gathering: Scryfall (<a href="https://api.scryfall.com">api.scryfall.com</a>, see <a href="https://scryfall.com/docs/privacy">scryfall.com/docs/privacy</a>)</li>
+        <li>One Piece Card Game: OPTCG API (<a href="https://optcgapi.com">optcgapi.com</a>)</li>
+      </ul>
+      <p>These requests contain no images, no identifiers of you or your device and no information about your collection, other than the card being looked up. Like any internet request, they reveal your IP address and basic technical information (such as the app version in the request header) to the service you contact, which handles it under its own policies. These services are independent of us.</p>
+      <p>To keep collection values and price alerts up to date, the App may refresh the prices of cards in your collection in the background using iOS Background App Refresh. These refreshes send the same kind of card-lookup requests and nothing else. You can turn Background App Refresh off for the App in iOS Settings.</p>
+    </section>
+
+    <section class="section">
+      <h2>6. Your Collection</h2>
+      <p>Your collection, scan history, price history, price alerts and settings are stored only in the App&rsquo;s storage on your device. We do not run a server that receives or stores your collection. Your device&rsquo;s own backups (for example iCloud Backup, if you use it) may include this data under Apple&rsquo;s terms.</p>
+      <p>If you export your collection as a CSV file, the file is created on your device and goes only where you choose to save or share it.</p>
+    </section>
+
+    <section class="section">
+      <h2>7. Price Alerts and Notifications</h2>
+      <p>Price alerts are delivered as local notifications that the App schedules on your device after a price check. The App does not use a push-notification server, and no personal data is sent anywhere for notifications. Notification permission is optional and can be changed at any time in iOS Settings.</p>
+    </section>
+
+    <section class="section">
+      <h2>8. Purchases</h2>
+      <p>Subscriptions and the lifetime purchase are processed by Apple through StoreKit and your Apple Account. We never see your name, Apple Account details or payment information. The App receives only the standard transaction information Apple provides (such as which product was bought and whether it is active) so it can unlock Rip &amp; Track Pro on your devices.</p>
+    </section>
+
+    <section class="section">
+      <h2>9. Analytics</h2>
+      <p>To understand how the App is used and to improve it, the App records basic usage events, for example which screens were viewed, whether a scan was completed and whether a match was found, which features were used, paywall views and purchase or subscription events (such as a purchase started, completed or restored, and the product). These events never include card photos.</p>
+      <p>These events are sent to two analytics services, Google Firebase Analytics and Umeng (U-App), together with basic device information such as device model, OS version, app version, language/region, network type, an app-instance identifier and a per-vendor device identifier (IDFV). This data is used in aggregate and is not linked to your name or contact details. It is not used for advertising and the App does not track you across other companies&rsquo; apps or websites. Firebase processes data under Google&rsquo;s terms (<a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>); Umeng processes data under its privacy policy (<a href="https://www.umeng.com/page/policy">umeng.com/page/policy</a>), and data sent to Umeng may be processed on servers in mainland China.</p>
+      <p>If you have opted in to sharing analytics with app developers in iOS Settings, Apple may also provide us with aggregated, anonymised crash and usage statistics.</p>
+    </section>
+
+    <section class="section">
+      <h2>10. Data Retention and Deletion</h2>
+      <p>Everything the App stores lives on your device. You can remove individual cards inside the App, and <strong>deleting the App removes your collection, scan history, alerts and settings from your device</strong>. If you want to keep a copy, export your collection as CSV first.</p>
+      <p>Analytics data is kept by Firebase and Umeng for the periods set in their policies. Because it is not linked to your name or contact details we usually cannot single it out, but if you email us we will do what we can with our providers.</p>
+    </section>
+
+    <section class="section">
+      <h2>11. Your Rights</h2>
+      <p>Depending on where you live (for example under the GDPR in the EU/UK or the CCPA in California), you may have the right to access, correct, delete or object to the processing of your personal data. Because we do not hold accounts or your collection on our own servers, most data can be removed simply by deleting the App. For any request, email us at the address below.</p>
+    </section>
+
+    <section class="section">
+      <h2>12. Children</h2>
+      <p>The App is a general-audience reference tool and is not directed at children under 13. It has no accounts, no ads and no chat, and we do not knowingly collect personal information from children. If you believe a child has provided personal information through the App, contact us and we will help.</p>
+    </section>
+
+    <section class="section">
+      <h2>13. Changes to This Policy</h2>
+      <p>We may update this policy from time to time. Material changes will be reflected on this page with a new effective date.</p>
+    </section>
+
+    <section class="section">
+      <h2>14. Contact</h2>
+      <p>Questions about this policy? Email <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>.</p>
+    </section>
+
+    <footer>
+      <p>Rip &amp; Track &mdash; Privacy Policy &middot; <a href="tcg-terms.html">Terms of Use</a> &middot; <a href="tcg-support.html">Support</a></p>
+    </footer>
+  </main>
+</body>
+</html>
