@@ -112,7 +112,7 @@
       <h2>9. Refund Protection (Usage Reporting)</h2>
       <p>Apple decides refund requests for App Store purchases. When you ask Apple for a refund, Apple sends us a request for information about how the purchase was used, and its rules allow us to answer through the App Store Server API. To be able to answer, and to prevent refund abuse, the App reports the following to our refund-protection service after Pro features are used successfully (reports are grouped and resent later if the device is offline):</p>
       <ul>
-        <li>a random install ID created by the App (not the advertising identifier and not the IDFV), which is kept in the App&rsquo;s storage and in your iCloud key-value storage so that it stays the same if you reinstall the App;</li>
+        <li>a random install ID created by the App (not the advertising identifier and not the IDFV). The App stores it with its data on your device and may also keep a copy in iCloud key-value storage, so it may stay the same if you reinstall the App;</li>
         <li>the original transaction ID and product ID of your active subscription, or of your most recent purchase such as Pro Lifetime;</li>
         <li>the number and times of successful uses of Pro features: card scans, CSV exports and price alerts set;</li>
         <li>the App&rsquo;s bundle ID and version, the platform, your preferred language, the time of the report and a promotional-notification setting that is off.</li>
@@ -131,7 +131,7 @@
 
     <section class="section">
       <h2>11. Data Retention and Deletion</h2>
-      <p>Your collection, scan history, alerts and settings live only on your device. You can remove individual cards inside the App, and <strong>deleting the App removes your collection, scan history, alerts and settings from your device</strong>. If you want to keep a copy, export your collection as CSV first. The refund-protection install ID stays in your iCloud key-value storage after the App is deleted; it contains no other data.</p>
+      <p>Your collection, scan history, alerts and settings live only on your device. You can remove individual cards inside the App, and <strong>deleting the App removes your collection, scan history, alerts and settings from your device</strong>. If you want to keep a copy, export your collection as CSV first. Deleting the App also deletes the refund-protection install ID from your device; a copy kept in iCloud key-value storage, if any, contains nothing else.</p>
       <p>Refund-protection records (section 9) are kept on our service as described there. To have them deleted, email us; telling us roughly when you bought Rip &amp; Track Pro and attaching the Apple receipt email helps us find them.</p>
       <p>Analytics data is kept by Firebase and Umeng for the periods set in their policies. Because it is not linked to your name or contact details we usually cannot single it out, but if you email us we will do what we can with our providers.</p>
     </section>
