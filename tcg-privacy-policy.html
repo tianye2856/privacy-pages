@@ -49,7 +49,7 @@
       <p class="meta">Rip &amp; Track &mdash; TCG Card Scanner &amp; Collection Tracker</p>
       <p class="meta">Effective date: October 15, 2026</p>
       <div class="notice">
-        <strong>Short version:</strong> Rip &amp; Track reads your card photos on your device with Apple&rsquo;s Vision framework and never uploads them. To look up a price, only the recognised card text (such as the card name, set and number) is sent to public card databases. Your collection is stored on your device. There are no accounts, no ads and no cross-app tracking; anonymous usage statistics are collected with Firebase Analytics and Umeng, and we never sell your data.
+        <strong>Short version:</strong> Rip &amp; Track reads your card photos on your device with Apple&rsquo;s Vision framework and never uploads them. To look up a price, only the recognised card text (such as the card name, set and number) is sent to public card databases. Your collection is stored on your device. There are no accounts, no ads and no cross-app tracking; anonymous usage statistics are collected with Firebase Analytics and Umeng, and we never sell your data. To handle refund requests fairly, the App also reports how often Pro features were used, with your purchase&rsquo;s transaction ID, to our refund-protection service, which shares a usage summary with Apple when you ask Apple for a refund (section 9).
       </div>
     </header>
 
@@ -105,39 +105,54 @@
 
     <section class="section">
       <h2>8. Purchases</h2>
-      <p>Subscriptions and the lifetime purchase are processed by Apple through StoreKit and your Apple Account. We never see your name, Apple Account details or payment information. The App receives only the standard transaction information Apple provides (such as which product was bought and whether it is active) so it can unlock Rip &amp; Track Pro on your devices.</p>
+      <p>Subscriptions and the lifetime purchase are processed by Apple through StoreKit and your Apple Account. We never see your name, Apple Account details or payment information. The App receives only the standard transaction information Apple provides (such as which product was bought, whether it is active and its transaction ID) so it can unlock Rip &amp; Track Pro on your devices. The transaction ID is also used for refund protection as described in section 9.</p>
     </section>
 
     <section class="section">
-      <h2>9. Analytics</h2>
+      <h2>9. Refund Protection (Usage Reporting)</h2>
+      <p>Apple decides refund requests for App Store purchases. When you ask Apple for a refund, Apple sends us a request for information about how the purchase was used, and its rules allow us to answer through the App Store Server API. To be able to answer, and to prevent refund abuse, the App reports the following to our refund-protection service after Pro features are used successfully (reports are grouped and resent later if the device is offline):</p>
+      <ul>
+        <li>a random install ID created by the App (not the advertising identifier and not the IDFV), which is kept in the App&rsquo;s storage and in your iCloud key-value storage so that it stays the same if you reinstall the App;</li>
+        <li>the original transaction ID and product ID of your active subscription, or of your most recent purchase such as Pro Lifetime;</li>
+        <li>the number and times of successful uses of Pro features: card scans, CSV exports and price alerts set;</li>
+        <li>the App&rsquo;s bundle ID and version, the platform, your preferred language, the time of the report and a promotional-notification setting that is off.</li>
+      </ul>
+      <p>These reports never include card photos, card names, prices, your collection, your name, email address, Apple Account details or the advertising identifier.</p>
+      <p>The service runs on Google Cloud Functions and Cloud Firestore in a Firebase project operated by us, in the United States. The records cannot be read by the App or by other users; only our service and the people who operate it can access them. When Apple sends a request about a refund you asked for, the service adds up the usage recorded for that transaction and reports to Apple, as Apple&rsquo;s rules describe: whether the content was delivered, what share of the purchase was used, and our refund preference. Apple makes the final decision. We do not use this data for advertising or analytics, and we do not share it with anyone except Apple for the refund request.</p>
+      <p>We rely on our legitimate interest in handling refund requests fairly and preventing refund abuse. We keep these records only as long as needed for refund requests and abuse prevention concerning the purchase, and we delete them on request (section 11).</p>
+    </section>
+
+    <section class="section">
+      <h2>10. Analytics</h2>
       <p>To understand how the App is used and to improve it, the App records basic usage events, for example which screens were viewed, whether a scan was completed and whether a match was found, which features were used, paywall views and purchase or subscription events (such as a purchase started, completed or restored, and the product). These events never include card photos.</p>
       <p>These events are sent to two analytics services, Google Firebase Analytics and Umeng (U-App), together with basic device information such as device model, OS version, app version, language/region, network type, an app-instance identifier and a per-vendor device identifier (IDFV). This data is used in aggregate and is not linked to your name or contact details. It is not used for advertising and the App does not track you across other companies&rsquo; apps or websites. Firebase processes data under Google&rsquo;s terms (<a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>); Umeng processes data under its privacy policy (<a href="https://www.umeng.com/page/policy">umeng.com/page/policy</a>), and data sent to Umeng may be processed on servers in mainland China.</p>
       <p>If you have opted in to sharing analytics with app developers in iOS Settings, Apple may also provide us with aggregated, anonymised crash and usage statistics.</p>
     </section>
 
     <section class="section">
-      <h2>10. Data Retention and Deletion</h2>
-      <p>Everything the App stores lives on your device. You can remove individual cards inside the App, and <strong>deleting the App removes your collection, scan history, alerts and settings from your device</strong>. If you want to keep a copy, export your collection as CSV first.</p>
+      <h2>11. Data Retention and Deletion</h2>
+      <p>Your collection, scan history, alerts and settings live only on your device. You can remove individual cards inside the App, and <strong>deleting the App removes your collection, scan history, alerts and settings from your device</strong>. If you want to keep a copy, export your collection as CSV first. The refund-protection install ID stays in your iCloud key-value storage after the App is deleted; it contains no other data.</p>
+      <p>Refund-protection records (section 9) are kept on our service as described there. To have them deleted, email us; telling us roughly when you bought Rip &amp; Track Pro and attaching the Apple receipt email helps us find them.</p>
       <p>Analytics data is kept by Firebase and Umeng for the periods set in their policies. Because it is not linked to your name or contact details we usually cannot single it out, but if you email us we will do what we can with our providers.</p>
     </section>
 
     <section class="section">
-      <h2>11. Your Rights</h2>
-      <p>Depending on where you live (for example under the GDPR in the EU/UK or the CCPA in California), you may have the right to access, correct, delete or object to the processing of your personal data. Because we do not hold accounts or your collection on our own servers, most data can be removed simply by deleting the App. For any request, email us at the address below.</p>
+      <h2>12. Your Rights</h2>
+      <p>Depending on where you live (for example under the GDPR in the EU/UK or the CCPA in California), you may have the right to access, correct, delete or object to the processing of your personal data. We do not hold accounts or your collection on our own servers, so most data can be removed simply by deleting the App; for the refund-protection records, see section 11. For any request, email us at the address below.</p>
     </section>
 
     <section class="section">
-      <h2>12. Children</h2>
+      <h2>13. Children</h2>
       <p>The App is a general-audience reference tool and is not directed at children under 13. It has no accounts, no ads and no chat, and we do not knowingly collect personal information from children. If you believe a child has provided personal information through the App, contact us and we will help.</p>
     </section>
 
     <section class="section">
-      <h2>13. Changes to This Policy</h2>
+      <h2>14. Changes to This Policy</h2>
       <p>We may update this policy from time to time. Material changes will be reflected on this page with a new effective date.</p>
     </section>
 
     <section class="section">
-      <h2>14. Contact</h2>
+      <h2>15. Contact</h2>
       <p>Questions about this policy? Email <a href="mailto:feedback@globalpixelstudio.com">feedback@globalpixelstudio.com</a>.</p>
     </section>
 
