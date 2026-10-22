@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /privacy-pages/sketchmotion/
+Sitemap: https://tianye2856.github.io/privacy-pages/sketchmotion/sitemap.xml
