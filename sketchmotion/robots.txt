@@ -1,3 +1,4 @@
+# Legacy subtree notice; this file is not the host-root robots.txt.
+# Canonical sitemap: https://sketchmotion-ed020.web.app/sitemap.xml
 User-agent: *
 Allow: /privacy-pages/sketchmotion/
-Sitemap: https://tianye2856.github.io/privacy-pages/sketchmotion/sitemap.xml
