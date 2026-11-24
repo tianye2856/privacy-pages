@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy | Rip &amp; Track</title>
-  <meta name="description" content="Privacy Policy for Rip &amp; Track, the trading card scanner and collection tracker. Card photos are read on your device and never uploaded; your collection stays on your device.">
+  <meta name="description" content="Privacy Policy for Rip &amp; Track, the trading card scanner and collection tracker. Card photos are read on your device first, with encrypted AI recognition and pre-grading that never stores images; your collection stays on your device.">
   <style>
     :root {
       color-scheme: light;
@@ -47,9 +47,9 @@
     <header>
       <h1>Privacy Policy</h1>
       <p class="meta">Rip &amp; Track &mdash; TCG Card Scanner &amp; Collection Tracker</p>
-      <p class="meta">Effective date: October 15, 2026</p>
+      <p class="meta">Effective date: November 24, 2026</p>
       <div class="notice">
-        <strong>Short version:</strong> Rip &amp; Track reads your card photos on your device with Apple&rsquo;s Vision framework and never uploads them. To look up a price, only the recognised card text (such as the card name, set and number) is sent to public card databases. Your collection is stored on your device. There are no accounts, no ads and no cross-app tracking; usage statistics are collected with Firebase Analytics and Umeng, and we never sell your data. If you opt in in Profile, the App reports Pro feature usage and purchase identifiers to our refund service so it can share a summary with Apple for refund requests. This sharing is off by default and you can turn it off at any time (section 9).
+        <strong>Short version:</strong> Rip &amp; Track reads your card photos <strong>on your device first</strong> using Apple&rsquo;s Vision framework. When on-device recognition cannot identify a card (such as non-English prints, foils, or graded slabs) or when you use AI Recognition or AI Pre-Grading, only the cropped card image is sent over HTTPS through our App Attest&ndash;verified gateway to Replicate (<code>google/gemini-3-flash</code>) solely to return the card identity or condition estimate &mdash; images are processed in memory, never stored on our servers, and never used to train models. To look up a price, recognised card text is sent to public card databases (TCGdex, Scryfall, OPTCG API, and YGOPRODeck). Your collection is stored on your device. There are no accounts, no ads and no cross-app tracking; usage statistics are collected with Firebase Analytics and Umeng, and we never sell your data. If you opt in in Profile, the App reports Pro feature usage and purchase identifiers to our refund service so it can share a summary with Apple for refund requests (off by default, section 9).
       </div>
     </header>
 
@@ -61,7 +61,7 @@
 
     <section class="section">
       <h2>2. What the App Does</h2>
-      <p>Rip &amp; Track identifies trading cards (Pok&eacute;mon, One Piece Card Game and Magic: The Gathering) from a photo, shows estimated market prices, lets you keep a collection and follow its value over time, and can alert you when a card&rsquo;s price reaches a level you choose.</p>
+      <p>Rip &amp; Track identifies trading cards &mdash; including Pok&eacute;mon (multi-language prints), One Piece Card Game, Magic: The Gathering, and Yu-Gi-Oh! &mdash; from a photo using on-device Vision OCR and, when needed, encrypted AI recognition. It shows estimated market prices, offers optional AI Pre-Grading &amp; Centering condition estimates, lets you keep a collection and follow its value over time, and can alert you when a card&rsquo;s price reaches a level you choose.</p>
     </section>
 
     <section class="section">
@@ -70,25 +70,31 @@
         <li>No user accounts. The App works without registration of any kind.</li>
         <li>No names, email addresses, contacts, precise location, health data, messages or browsing history. Analytics services may infer a general region or city from the IP address used to connect; we do not request location permission.</li>
         <li>No advertising, no third-party advertising SDKs, no advertising identifier (IDFA) and no tracking across other companies&rsquo; apps or websites. For this reason the App does not show the App Tracking Transparency prompt.</li>
-        <li>We do not sell, rent or share personal data with data brokers.</li>
+        <li>We do not sell, rent or share personal data with data brokers, and we do not store your card photos on our servers or use them to train AI models.</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>4. Camera and Photos</h2>
-      <p>When you scan a card, the camera image (or the photo you pick from your library) is analysed <strong>on your device</strong> using Apple&rsquo;s Vision text-recognition framework to read the printed card name, set code and collector number. The image itself is never uploaded &mdash; not to us and not to any third party.</p>
-      <p>If you choose a photo from your library, the App reads only the photo you select. Any scan image or thumbnail the App keeps for your scan history stays on your device. Camera and photo access can be changed at any time in iOS Settings.</p>
+      <h2>4. Camera, Photos, and Hybrid AI Processing</h2>
+      <p>Rip &amp; Track uses a privacy-first hybrid recognition flow:</p>
+      <ul>
+        <li><strong>On-device Vision OCR runs first:</strong> When you scan a card with the camera or pick a photo from your library, the App analyses the image <strong>on your device</strong> using Apple&rsquo;s Vision text-recognition framework to read the printed card name, set code and collector number. When on-device OCR matches the card, no image leaves your device.</li>
+        <li><strong>Encrypted AI Recognition &amp; AI Pre-Grading:</strong> When on-device OCR cannot identify a card (for example, non-English cards, holographic glare, alternate arts, or graded slabs) or when you explicitly invoke <strong>AI Recognition</strong> or <strong>AI Pre-Grading</strong> (front and optional back card photo), the App transmits the cropped card image &mdash; together with non-personal context such as OCR text hints, card name, game, and app language &mdash; over HTTPS through our <strong>Apple App Attest&ndash;verified AI gateway</strong> (hosted on Google Cloud / Firebase in the United States) to <strong>Replicate</strong>, running Google&rsquo;s <code>google/gemini-3-flash</code> model solely to return the card identity or condition/centering estimate.</li>
+        <li><strong>No storage and no model training:</strong> Card images sent to the AI gateway and Replicate are processed transiently in memory solely to fulfill your immediate request. They are <strong>never stored</strong> on our servers, are not linked to your name or any user account, and are <strong>never used to train AI models</strong>. App Attest tokens verify app integrity and do not identify you personally. For Replicate&rsquo;s handling of transient API inference requests, see <a href="https://replicate.com/privacy">replicate.com/privacy</a>.</li>
+      </ul>
+      <p>If you choose a photo from your library, the App reads only the photo you select. Any scan image or thumbnail the App keeps for your collection or scan history stays on your device. Camera and photo access can be changed at any time in iOS Settings.</p>
     </section>
 
     <section class="section">
-      <h2>5. Price Lookups</h2>
-      <p>To find a card and its price, the App sends the recognised card text &mdash; the card name, set or set code, collector number and game &mdash; over an encrypted connection to the public card database for that game:</p>
+      <h2>5. Price Lookups and Public Card Databases</h2>
+      <p>To find a card and its market price, the App sends the recognised card text &mdash; the card name, set or set code, collector number, language and game &mdash; over an encrypted connection to the public card database for that game:</p>
       <ul>
-        <li>Pok&eacute;mon: TCGdex (<a href="https://api.tcgdex.net">api.tcgdex.net</a>, see <a href="https://tcgdex.dev">tcgdex.dev</a>)</li>
+        <li>Pok&eacute;mon (multi-language, including English, Japanese, Italian, German, French, Spanish, Korean, Chinese &amp; more): TCGdex (<a href="https://api.tcgdex.net">api.tcgdex.net</a>, see <a href="https://tcgdex.dev">tcgdex.dev</a>)</li>
         <li>Magic: The Gathering: Scryfall (<a href="https://api.scryfall.com">api.scryfall.com</a>, see <a href="https://scryfall.com/docs/privacy">scryfall.com/docs/privacy</a>)</li>
         <li>One Piece Card Game: OPTCG API (<a href="https://optcgapi.com">optcgapi.com</a>)</li>
+        <li>Yu-Gi-Oh!: YGOPRODeck API (<a href="https://db.ygoprodeck.com">db.ygoprodeck.com</a>, see <a href="https://ygoprodeck.com/privacy-policy/">ygoprodeck.com/privacy-policy</a>)</li>
       </ul>
-      <p>These requests contain no images, no identifiers of you or your device and no information about your collection, other than the card being looked up. Like any internet request, they reveal your IP address and basic technical information (such as the app version in the request header) to the service you contact, which handles it under its own policies. These services are independent of us.</p>
+      <p>These price-lookup requests contain no card photos, no personal identifiers of you or your device and no information about your collection, other than the card being looked up. Like any internet request, they reveal your IP address and basic technical information (such as the app version in the request header) to the service you contact, which handles it under its own policies. These services are independent of us.</p>
       <p>To keep collection values and price alerts up to date, the App may refresh the prices of cards in your collection in the background using iOS Background App Refresh. These refreshes send the same kind of card-lookup requests and nothing else. You can turn Background App Refresh off for the App in iOS Settings.</p>
     </section>
 
@@ -132,6 +138,7 @@
     <section class="section">
       <h2>11. Data Retention and Deletion</h2>
       <p>Your collection, scan history, alerts and settings live only on your device. You can remove individual cards inside the App, and <strong>deleting the App removes your collection, scan history, alerts and settings from your device</strong>. If you want to keep a copy, export your collection as CSV first. Deleting the App also deletes the refund-protection install ID from your device; a copy kept in iCloud key-value storage, if any, contains nothing else.</p>
+      <p>Cropped card images transmitted for AI Recognition or AI Pre-Grading (section 4) are processed transiently in memory and are not stored on our servers.</p>
       <p>Refund-protection records (section 9) are kept on our service as described there. To have them deleted, email us; telling us roughly when you bought Rip &amp; Track Pro and attaching the Apple receipt email helps us find them.</p>
       <p>Analytics data is kept by Firebase and Umeng for the periods set in their policies. Because it is not linked to your name or contact details we usually cannot single it out, but if you email us we will do what we can with our providers.</p>
     </section>
