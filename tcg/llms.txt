@@ -1,0 +1,39 @@
+# Rip & Track (TCG Card Scanner: Rip & Track) official website index
+
+The official Rip & Track product website, real-device 20-card recognition benchmark, eight collector guides, seven localized hubs, and machine-readable JSON/Markdown references are hosted at https://trading-card-game-93367.web.app/.
+
+## Official product pages
+- [English](https://trading-card-game-93367.web.app/)
+- [Italiano](https://trading-card-game-93367.web.app/it/)
+- [日本語](https://trading-card-game-93367.web.app/ja/)
+- [Deutsch](https://trading-card-game-93367.web.app/de/)
+- [Français](https://trading-card-game-93367.web.app/fr/)
+- [简体中文](https://trading-card-game-93367.web.app/zh-hans/)
+- [한국어](https://trading-card-game-93367.web.app/ko/)
+- [Español](https://trading-card-game-93367.web.app/es/)
+
+## Real-device benchmark & collector guides
+- [20-Card Real-Device Multi-Language & Adverse-Photo Benchmark](https://trading-card-game-93367.web.app/benchmarks/multi-language-tcg-recognition/)
+- [Best TCG Card Scanner Apps for iPhone (2026)](https://trading-card-game-93367.web.app/guides/best-tcg-card-scanner-iphone/)
+- [How to Scan Japanese & European Pokémon Cards on iPhone](https://trading-card-game-93367.web.app/guides/scan-japanese-and-european-pokemon-cards/)
+- [AI Card Pre-Grading & Centering on iPhone](https://trading-card-game-93367.web.app/guides/ai-card-pre-grading-centering-iphone/)
+- [Multi-Game TCG Card Value Scanner (PKM / MTG / OP / YGO)](https://trading-card-game-93367.web.app/guides/yugioh-one-piece-mtg-card-value-scanner/)
+- [Collectr & TCGplayer App Alternatives for iPhone](https://trading-card-game-93367.web.app/guides/collectr-tcgplayer-alternatives-iphone/)
+- [Best TCG & Pokémon Card Scanner Without an Account (Privacy & Lifetime)](https://trading-card-game-93367.web.app/guides/pokemon-card-scanner-no-account-offline-privacy/)
+- [PSA 10 Centering Checker on iPhone & Raw vs Graded ROI](https://trading-card-game-93367.web.app/guides/psa-10-centering-checker-iphone/)
+- [Cardmarket EUR vs TCGplayer USD Prices (Europe & Multi-Currency)](https://trading-card-game-93367.web.app/guides/cardmarket-vs-tcgplayer-prices-europe-japan/)
+
+## Machine-readable references & legal
+- [Canonical llms.txt](https://trading-card-game-93367.web.app/llms.txt)
+- [Full LLM reference (llms-full.txt)](https://trading-card-game-93367.web.app/llms-full.txt)
+- [Canonical sitemap](https://trading-card-game-93367.web.app/sitemap.xml)
+- [App facts JSON](https://trading-card-game-93367.web.app/app-facts.json)
+- [Product facts JSON alias](https://trading-card-game-93367.web.app/product-facts.json)
+- [Real-device benchmark JSON](https://trading-card-game-93367.web.app/benchmarks.json)
+- [Canonical FAQ JSON](https://trading-card-game-93367.web.app/faq.json)
+- [App Store (ID 6823030335)](https://apps.apple.com/app/id6823030335)
+- [Support](https://tianye2856.github.io/privacy-pages/tcg-support.html)
+- [Privacy Policy](https://tianye2856.github.io/privacy-pages/tcg-privacy-policy.html)
+- [Terms of Use](https://tianye2856.github.io/privacy-pages/tcg-terms.html)
+
+App Store ID: 6823030335 · Bundle ID: com.liekunji.tcg · Version verified: 1.0.1 (2026-11-24). Public availability, pricing, and product limitations are stated on the official website. Indexing, rankings, and AI recommendations are not guaranteed.
